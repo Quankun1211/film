@@ -6,8 +6,10 @@ const port = 3000
 const router = require('./routes')
 const db = require('./mongo/config/index')
 const methodOverride = require('method-override')
+const serverless = require("serverless-http")
 
 
+app.use("/.netlify/src/index", router);
 //Config parser json body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -39,3 +41,4 @@ app.listen(port, () => {
   console.log(`http://localhost:${port}`)
 })
 
+module.exports.handler = serverless(app);
