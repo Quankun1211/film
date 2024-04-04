@@ -1,0 +1,45 @@
+
+<form method="post" id="form-search" action="/user/search" class="user pt-5 d-flex align-items-center flex-column">
+<a href="/" class="btn btn-logout">Đăng xuất</a>
+  <div class="search">
+    <div class="input-group search-form ">
+      <a href="/user" type="submit" class="btn btn-user-page btn-primary mr-2">Trang chủ</a>
+      <input id="search-input" name="search" type="text" class="input-active form-control" placeholder="Recipient's username">
+      <button type="submit" class="btn btn-primary ml-2">Tìm kiếm</button>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <div class="row p-custome">
+    {{#each filmData}}
+      <div class="col-3 underline mx-2">
+          <a href="/user/{{this._id}}">
+            <img class="card-img-top card-item" src="https://i.ytimg.com/vi/{{this.link}}/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIF4oQDAP&rs=AOn4CLDzZ_kSfvudIC2urLKEY8nkKNPTaw" alt="Card image cap">
+          </a>
+          <div class="item-info p-2">
+            <a class="name-link" href="/user/{{this._id}}">
+              <h5 class="name">{{this.name}}</h5>
+            </a>
+            <div class="rate">
+                <i class="fa-regular fa-star rate-icon"></i>
+                <i class="fa-regular fa-star rate-icon"></i>
+                <i class="fa-regular fa-star rate-icon"></i>
+                <i class="fa-regular fa-star rate-icon"></i>
+                <i class="fa-regular fa-star rate-icon"></i>
+            </div>
+          </div>
+      </div>
+    {{/each}}
+    </div>
+
+  </div>
+</form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("form-search").addEventListener("click", function(event){
+    event.preventDefault()
+});
+}
+  })
+</script>

@@ -1,0 +1,28 @@
+<div class="user d-flex align-items-center justify-content-center flex-column pt-4">
+    <a href="/" class="btn btn-warn btn-logout">Đăng xuất</a>
+    <div class="search ">
+      <div class="input-group search-detail search-form">
+        <a href="javascript:history.back()" type="button" class="btn btn-back">Back</a>
+        <input type="text" class="form-control" placeholder="Recipient's username">
+        <button type="button" class="btn btn-primary ml-2">Tìm kiếm</button>
+      </div>
+    </div>
+
+    <div class="content-detail mt-3">
+      <iframe class="iframe" src="https://www.youtube.com/embed/{{film.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="item-info d-flex align-items-center p-2">
+        <h2 class="name mr-4">{{film.name}}</h2>
+        <div class="rate">
+            <i class="fa-regular fa-star rate-icon"></i>
+            <i class="fa-regular fa-star rate-icon"></i>
+            <i class="fa-regular fa-star rate-icon"></i>
+            <i class="fa-regular fa-star rate-icon"></i>
+            <i class="fa-regular fa-star rate-icon"></i>
+        </div>
+      </div>
+
+      <div class="description">
+        <p class="description-item">{{film.description}}</p>
+      </div>
+    </div>
+</div>
