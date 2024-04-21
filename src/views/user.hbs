@@ -3,7 +3,7 @@
 <a href="/" class="btn btn-logout">Đăng xuất</a>
   <div class="search">
     <div class="input-group search-form ">
-      <input id="search-input" name="search" type="text" class="input-active form-control" placeholder="Recipient's username">
+      <input id="search-input" name="search" type="text" class="input-active form-control" placeholder="Tên phim...">
       <button type="submit" class="btn btn-primary ml-2">Tìm kiếm</button>
     </div>
   </div>
@@ -13,7 +13,7 @@
     {{#each film}}
       <div class="col-3 col underline mx-2">
           <a href="/user/{{this._id}}">
-            <img class="card-img-top card-item" src="https://i.ytimg.com/vi/{{this.link}}/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC14sH0T_2eF8AedcmME0VhPfB5_w" alt="Card image cap">
+            <img class="card-img-top card-item" src="https://i.ytimg.com/vi/{{this.link}}/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC14sH0T_2eF8AedcmME0VhPfB5_w" alt="">
           </a>
           <div class="item-info p-2">
             <a class="name-link" href="/user/{{this._id}}">
@@ -28,6 +28,8 @@
             </div>
           </div>
       </div>
+    {{else}}
+      <h1>NONE</h1>
     {{/each}}
     </div>
 

@@ -79,7 +79,7 @@ textarea:focus {
   min-height: 100vh;
   height: 100%;
   width: 100%;
-  background-color: #000;
+  background: linear-gradient(45deg, #060606b4, #202020e5, #111111ec);
   position: relative; }
 
 .btn-logout,
@@ -166,7 +166,7 @@ textarea:focus {
   font-weight: 600;
   position: absolute;
   background: linear-gradient(60deg, #2ba2e3, #4085eb);
-  top: 12.5%;
+  top: 2.5%;
   left: -80px;
   cursor: pointer; }
 
@@ -177,3 +177,7 @@ textarea:focus {
   box-shadow: 0 2px 8px #2ba2e3;
   background: linear-gradient(60deg, #278ec5, #3674d1) !important;
   border-color: none !important; }
+
+.else-title {
+  margin: auto;
+  color: #fff; }

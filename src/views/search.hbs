@@ -4,12 +4,12 @@
   <div class="search">
     <div class="input-group search-form ">
       <a href="/user" type="submit" class="btn btn-user-page btn-primary mr-2">Trang chủ</a>
-      <input id="search-input" name="search" type="text" class="input-active form-control" placeholder="Recipient's username">
+      <input id="search-input" name="search" type="text" class="input-active form-control" placeholder="Tên phim...">
       <button type="submit" class="btn btn-primary ml-2">Tìm kiếm</button>
     </div>
   </div>
 
-  <div class="container mt-3">
+  <div class="container mt-3 ">
     <div class="row p-custome">
     {{#each filmData}}
       <div class="col-3 underline mx-2">
@@ -29,6 +29,8 @@
             </div>
           </div>
       </div>
+    {{else}}
+      <h1 class="else-title">Phim bạn tìm hiện không có trên dịch vụ này</h1>
     {{/each}}
     </div>
 

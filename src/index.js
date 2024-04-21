@@ -29,7 +29,15 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.use(express.static('/public'))
 
 //Router
-router(app)
+// router(app)
+app.get('/', (req, res) => {
+  res.send('GET request to the homepage')
+})
+
+// POST method route
+app.post('/', (req, res) => {
+  res.send('POST request to the homepage')
+})
 
 //Override
 // app.use(methodOverride('X-HTTP-Method-Override'))
@@ -40,5 +48,4 @@ app.listen(port, () => {
   console.log(`http://localhost:${port}`)
 })
 
-app.use("/.netlify/functions/index", router);
 module.exports.handler = serverless(app);
